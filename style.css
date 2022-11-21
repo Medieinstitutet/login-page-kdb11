@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    font-family:'Sora', sans-serif;
+}
+
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+------------------------BACKGROUNDPIC-----------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+body {
+    background-image: url("/Assets/windowsLoginBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
