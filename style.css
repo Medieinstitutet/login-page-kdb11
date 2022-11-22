@@ -27,7 +27,7 @@ body {
 ------------------------------------------------------------------
 ------------------------------------------------------------------ */
 
-form {
+#mainForm {
     top: 67%;
     left: 39.7%;
     width: 20%;
@@ -44,7 +44,7 @@ input {
     text-align: center;
 }
 
-button {
+#loginBtn {
     margin-top: 15px;
     align-items: center;
     width: 50%;
@@ -53,4 +53,22 @@ button {
     height: 33px;
     font-weight: bold;
     font-size: larger;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#logoutBtn {
+    top: 77.5%;
+    margin-top: 15px;
+    align-items: center;
+    width: 10%;
+    left: 44.7%;
+    position: absolute;
+    height: 33px;
+    font-weight: bold;
+    font-size: larger;
+    display: none;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 25px;
 }
