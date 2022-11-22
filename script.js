@@ -8,7 +8,6 @@ var objectUsers = [
 
 const loginBtn = document.getElementById("loginBtn");
 loginBtn.addEventListener("click", function () {
-    console.log("click pa knapp");
 });
 
 function login() {
@@ -21,6 +20,7 @@ function login() {
 		
 		if(username == objectUsers[i].username && password == objectUsers[i].password) {
 			console.log(username + " is logged in!")
+            document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
 			break
 		} else {
 			console.log("incorrect username or password")

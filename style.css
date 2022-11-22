@@ -14,9 +14,43 @@
 ------------------------------------------------------------------ */
 
 body {
-    background-image: url("/Assets/windowsLoginBackground.png");
+    background-image: url("/Assets/animatedWindows.gif");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
+}
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+-----------------------------FORM---------------------------------
+------------------------------------------------------------------
+------------------------------------------------------------------ */
+
+form {
+    top: 67%;
+    left: 39.7%;
+    width: 20%;
+    position: absolute;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin-top: 15px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    align-items: center;
+    width: 50%;
+    left: 25%;
+    position: relative;
+    height: 33px;
+    font-weight: bold;
+    font-size: larger;
 }
