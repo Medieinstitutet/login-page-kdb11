@@ -6,10 +6,6 @@ var objectUsers = [
 	}
 ]
 
-const loginBtn = document.getElementById("loginBtn");
-loginBtn.addEventListener("click", function () {
-});
-
 function login() {
 	
 	var username = document.getElementById('username').value
@@ -27,3 +23,7 @@ function login() {
 		}
 	}
 }
+
+const loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener("click", function login() {
+});
