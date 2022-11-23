@@ -1,3 +1,6 @@
+const mainForm = document.getElementById("mainForm");
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
 
 var objectUsers = [
 	{
@@ -6,12 +9,42 @@ var objectUsers = [
 	}
 ]
 
-const mainForm = document.getElementById("mainForm");
-const loginBtn = document.getElementById("loginBtn");
-const logoutBtn = document.getElementById("logoutBtn");
+localStorage.setItem("objectUsers", JSON.stringify(objectUsers));
+let getMyObjectUsers = JSON.parse(localStorage.getItem("objectUsers"));
+console.log(getMyObjectUsers);
 
 
 loginBtn.addEventListener("click", function login() {
+	
+	var username = document.getElementById('username').value
+	
+	var password = document.getElementById('password').value
+
+    for(var i = 0; i < getMyObjectUsers.length; i++) {
+		
+		if(username == getMyObjectUsers[i].username && password == getMyObjectUsers[i].password) {
+            
+			document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
+			
+			document.getElementById("welcomeMsg").innerHTML = ("Welcome" + " " +username);
+			
+			mainForm.style.display = "none";
+			
+			logoutBtn.style.display = "block";
+
+			break
+
+		} else {
+			
+			document.getElementById("errorMsg").innerHTML = "Incorrect username or password";
+			
+			setTimeout(function(){
+				document.getElementById("errorMsg").innerHTML = "";}, 700);
+		}
+	}
+});
+
+/* loginBtn.addEventListener("click", function login() {
 	
 	var username = document.getElementById('username').value
 	
@@ -38,7 +71,7 @@ loginBtn.addEventListener("click", function login() {
 				document.getElementById("errorMsg").innerHTML = "";}, 700);
 		}
 	}
-});
+}); */
 
 logoutBtn.addEventListener("click", function logout() {
 
@@ -55,4 +88,3 @@ logoutBtn.addEventListener("click", function logout() {
 	document.getElementById("mainForm").reset();
 
 });
-
