@@ -14,7 +14,7 @@ var objectUsers = [
 	}
 ,
 	{
-		username: "erika",
+		username: "erik",
 		password: "tesla"
 	}
 ]
@@ -55,11 +55,11 @@ loginBtn.addEventListener("click", function login() {
 
 if(localStorage.getItem("objectUsers") !== null) {
 
-	var username = localStorage.getItem("username", );
+	var username = localStorage.getItem('username', );
 
 	document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
 	
-	document.getElementById("welcomeMsg").innerHTML = ("Welcome" + " " + username.substring(1,6));
+	document.getElementById("welcomeMsg").innerHTML = ("Welcome" + " " + JSON.parse(username));
 	
 	mainForm.style.display = "none";
 	
