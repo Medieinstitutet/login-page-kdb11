@@ -37,9 +37,7 @@ loginBtn.addEventListener("click", function login() {
 			
 			logoutBtn.style.display = "block";
 
-			localStorage.setItem("objectUsers", JSON.stringify(objectUsers));
-
-			localStorage.setItem("username", JSON.stringify(username));
+			localStorage.setItem("onlineUser", JSON.stringify(username));
 			
 			break
 
@@ -53,9 +51,9 @@ loginBtn.addEventListener("click", function login() {
 	}
 });
 
-if(localStorage.getItem("objectUsers") !== null) {
+if(localStorage.getItem("onlineUser") !== null) {
 
-	var username = localStorage.getItem('username', );
+	var username = localStorage.getItem("username", );
 
 	document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
 	
