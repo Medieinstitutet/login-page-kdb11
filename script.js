@@ -53,7 +53,7 @@ loginBtn.addEventListener("click", function login() {
 
 if(localStorage.getItem("onlineUser") !== null) {
 
-	var username = localStorage.getItem("username", );
+	var username = localStorage.getItem("onlineUser", );
 
 	document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
 	
