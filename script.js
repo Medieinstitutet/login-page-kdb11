@@ -7,12 +7,17 @@ var objectUsers = [
 		username: "janne",
 		password: "test"
 	}
+,
+	{
+		username: "albin",
+		password: "1234"
+	}
+,
+	{
+		username: "erika",
+		password: "tesla"
+	}
 ]
-
-localStorage.setItem("objectUsers", JSON.stringify(objectUsers));
-let getMyObjectUsers = JSON.parse(localStorage.getItem("objectUsers"));
-console.log(getMyObjectUsers);
-
 
 loginBtn.addEventListener("click", function login() {
 	
@@ -20,9 +25,9 @@ loginBtn.addEventListener("click", function login() {
 	
 	var password = document.getElementById('password').value
 
-    for(var i = 0; i < getMyObjectUsers.length; i++) {
+    for(var i = 0; i < objectUsers.length; i++) {
 		
-		if(username == getMyObjectUsers[i].username && password == getMyObjectUsers[i].password) {
+		if( username == objectUsers[i].username && password == objectUsers[i].password) {
             
 			document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
 			
@@ -32,6 +37,10 @@ loginBtn.addEventListener("click", function login() {
 			
 			logoutBtn.style.display = "block";
 
+			localStorage.setItem("objectUsers", JSON.stringify(objectUsers));
+
+			localStorage.setItem("username", JSON.stringify(username));
+			
 			break
 
 		} else {
@@ -44,34 +53,19 @@ loginBtn.addEventListener("click", function login() {
 	}
 });
 
-/* loginBtn.addEventListener("click", function login() {
-	
-	var username = document.getElementById('username').value
-	
-	var password = document.getElementById('password').value
+if(localStorage.getItem("objectUsers") !== null) {
 
-    for(var i = 0; i < objectUsers.length; i++) {
-		
-		if(username == objectUsers[i].username && password == objectUsers[i].password) {
-            
-			document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
-			
-			document.getElementById("welcomeMsg").innerHTML = ("Welcome" + " " +username);
-			
-			mainForm.style.display = "none";
-			
-			logoutBtn.style.display = "block";
-			break
+	var username = localStorage.getItem("username", );
 
-		} else {
-			
-			document.getElementById("errorMsg").innerHTML = "Incorrect username or password";
-			
-			setTimeout(function(){
-				document.getElementById("errorMsg").innerHTML = "";}, 700);
-		}
-	}
-}); */
+	document.body.style.backgroundImage = "url('Assets/windowsBackground.jpg')";
+	
+	document.getElementById("welcomeMsg").innerHTML = ("Welcome" + " " + username.substring(1,6));
+	
+	mainForm.style.display = "none";
+	
+	logoutBtn.style.display = "block";
+
+}
 
 logoutBtn.addEventListener("click", function logout() {
 
@@ -86,5 +80,7 @@ logoutBtn.addEventListener("click", function logout() {
 	document.getElementById("errorMsg").innerHTML = "";
 
 	document.getElementById("mainForm").reset();
+
+	localStorage.clear();
 
 });
