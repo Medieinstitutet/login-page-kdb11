@@ -99,3 +99,10 @@ input {
     width: 100%;
     position: absolute;
 }
+
+#footerMsg{
+    color: white;
+    top: 96%;
+    left: 48.3%;
+    position: absolute;
+}
