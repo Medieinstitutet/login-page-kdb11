@@ -8,11 +8,11 @@ login-page-kdb11 created by GitHub Classroom
 // footer
 
 
-		//username: janne
-		//password: "test"
+		username: janne
+		password: "test"
 
-		//username: "albin",
-		//password: "1234"
+		username: "albin",
+		password: "1234"
 
-		//username: "erik",
-		//password: "tesla"
+		username: "erik",
+		password: "tesla"
