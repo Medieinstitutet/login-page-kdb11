@@ -82,3 +82,33 @@ logoutBtn.addEventListener("click", function logout() {
 	localStorage.clear();
 
 });
+
+/* function registerUser() {
+	
+	var registerUsername = document.getElementById('newUsername').value
+
+	var registerPassword = document.getElementById('newPassword').value
+
+	var newUser = {
+		username: registerUsername,
+		password: registerPassword
+	}
+
+	for(var i = 0; i < objectUsers.length; i++) {
+
+		if(registerUsername == objectUsers[i].username) {
+
+			alert('That username is alreat in user, please choose another')
+
+			break
+		}
+	}
+
+	objectUsers.push(newUser)
+
+	console.log(objectUsers)
+} */
+
+/* localStorage.setItem("objectUsers", JSON.stringify(objectUsers));
+let getMyObjectUsers = JSON.parse(localStorage.getItem("objectUsers"));
+console.log(getMyObjectUsers); */
