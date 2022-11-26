@@ -63,7 +63,11 @@ if(localStorage.getItem("onlineUser") !== null) {
 	
 	logoutBtn.style.display = "block";
 
+} else {
+	document.body.style.backgroundImage = "url('Assets/animatedWindows.gif')";
 }
+
+
 
 logoutBtn.addEventListener("click", function logout() {
 
